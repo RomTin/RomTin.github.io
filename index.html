@@ -10,6 +10,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Include the library. -->
+    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
+
+
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   </head>
@@ -85,6 +93,21 @@
             <li><a href="https://www.pixiv.net/member.php?id=24304554" class="icon fa-paint-brush"><span class="label">Pixiv</span></a></li>
           </ul>
           <p>My works are published on <a href="https://github.com">GitHub</a> and <a href="https://pixiv.net">Pixiv</a>. Dot illustrations are free to use.</p>
+          <!-- Prepare a container for your calendar. -->
+          <style>
+.contrib-number {
+  color: #fff;
+}
+          </style>
+          <div class="calendar">
+
+            <img src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" class="spinner"/>
+          </div>
+
+          <script>
+GitHubCalendar(".calendar", "RomTin")
+.then( function(){ $('.f4.text-normal.mb-2').remove()});
+          </script>
         </article>
 
       </div>
